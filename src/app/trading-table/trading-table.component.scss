@@ -1,0 +1,45 @@
+.trades {
+  width: 100%;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.trades td {
+  padding: 1em;
+}
+
+.trades th {
+  color: var(--fg2);
+}
+
+.trades tr {
+  text-align: center;
+}
+
+.start-copy {
+  background-color: var(--accent);
+  font-size: 1.1em;
+  padding: 0.5em 2em;
+}
+
+.start-copy:hover {
+  background-color: var(--fg);
+  color: var(--bg);
+}
+
+.actions {
+  display: flex;
+  place-items: center;
+  gap: 1em;
+}
+
+.expand-details {
+  border: none;
+  background-color: transparent;
+  color: var(--accent);
+}
+
+.expand-details:hover {
+  background-color: var(--bg1);
+  color: var(--fg);
+}
