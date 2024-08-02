@@ -3,3 +3,11 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+@media (max-width: 1290px) {
+  .app {
+    max-width: unset;
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+}
