@@ -1,0 +1,101 @@
+.control {
+  background-color: var(--bg1);
+  border: 0.1em solid var(--fg1);
+  padding: 1em 2em 1em 2em;
+  color: var(--fg);
+  height: 100%;
+  box-sizing: border-box;
+}
+
+
+.filter-control {
+  border-color: var(--accent);
+}
+
+.control label {
+  font-size: 0.8em;
+}
+
+input[type="checkbox"].control {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  border: 0.15em solid var(--fg);
+  margin: 0;
+  padding: 0 !important;
+  width: 1.5em;
+  height: 1.5em;
+  display: grid;
+  place-content: center;
+}
+
+input[type="checkbox"].control::before {
+  content: "";
+  width: 1em;
+  height: 1em;
+  background: url("../../assets/images/checkbox.png");
+  background-position: center 50%;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  font-size: 1em;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--form-control-color);
+}
+
+input[type="checkbox"].control:checked::before {
+  transform: scale(1);
+}
+
+
+.control input {
+  padding: 1em;
+}
+
+.control::placeholder,
+.control::-moz-placeholder {
+  text-align: center;
+}
+
+.tab-filter {
+  width: 100%;
+  display: flex;
+  place-items: center;
+  gap: 2em;
+  height: 3em;
+  margin-bottom: 1em;
+}
+
+.tab-selector {
+  display: flex;
+  width: 100%;
+  gap: 1em;
+  margin-bottom: 1em;
+}
+
+.tab-selector.alternate {
+  .control {
+    padding: 0.5em 2em 0.5em 2em;
+    font-weight: bold;
+  }
+}
+
+.select-wrapper {
+  display: flex;
+  gap: 0.5em;
+  place-items: center;
+  width: fit-content;
+}
+
+.select-wrapper arrow {
+  user-select: none;
+}
+
+.select-wrapper select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  background: var(--bg1);
+  color: var(--fg);
+}
