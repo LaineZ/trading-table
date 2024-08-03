@@ -1,19 +1,15 @@
-<table class="trades">
-  <tr>
-    <th>Wallet address</th>
-    <th>PNL</th>
-    <th>ROI</th>
-    <th>Followers</th>
-    <th></th>
-  </tr>
-  <tr *ngFor="let number of [0,1,2,3,4]">
-    <td>bc1qar0srrr7xfkvy5l643lydnw9re59gtzzwf5mdq</td>
-    <td>0.2423423535465456464776</td>
-    <td>100</td>
-    <td>100</td>
-    <td class="actions">
-      <a href="#" class="control btn start-copy">Start copy</a>
-      <button class="control btn expand-details">Expand details <span style="margin-left: 1em">↓</span></button>
-    </td>
-  </tr>
-</table>
+<div class="trades-container">
+  <table class="trades">
+    <tr>
+      <th>Wallet address</th>
+      <th>PNL</th>
+      <th>ROI</th>
+      <th>Followers</th>
+      <th></th>
+    </tr>
+    <tr *ngFor="let number of [0,1,2,3,4]" app-trading-item></tr>
+  </table>
+  <div class="trades-mobile">
+    <div *ngFor="let number of [0,1,2,3,4]" app-trading-item></div>
+  </div>
+</div>

@@ -16,30 +16,20 @@
   text-align: center;
 }
 
-.start-copy {
-  background-color: var(--accent);
-  font-size: 1.1em;
-  padding: 0.5em 2em;
+.trades-mobile {
+  display: none;
 }
 
-.start-copy:hover {
-  background-color: var(--fg);
-  color: var(--bg);
-}
+@media (max-width: 1200px) {
+  .trades {
+    display: none;
+  }
 
-.actions {
-  display: flex;
-  place-items: center;
-  gap: 1em;
-}
-
-.expand-details {
-  border: none;
-  background-color: transparent;
-  color: var(--accent);
-}
-
-.expand-details:hover {
-  background-color: var(--bg1);
-  color: var(--fg);
+  .trades-mobile {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    flex-wrap: wrap;
+    gap: 1em;
+  }
 }

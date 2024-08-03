@@ -158,3 +158,9 @@ input::-webkit-input-placeholder {
     padding: 0.7em;
   }
 }
+
+@media (max-width: 395px) {
+  .select-wrapper {
+    width: 100%;
+  }
+}
