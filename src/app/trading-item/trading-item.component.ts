@@ -9,5 +9,5 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./trading-item.component.scss']
 })
 export class TradingItemComponent {
-
+  expanded = false;
 }

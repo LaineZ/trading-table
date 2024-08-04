@@ -37,6 +37,10 @@
   gap: 1em;
 }
 
+.details {
+  background-color: var(--bg1);
+}
+
 .headline {
   grid-column: span 2;
 }

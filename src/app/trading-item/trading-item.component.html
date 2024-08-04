@@ -1,11 +1,16 @@
 <ng-container>
+  <div class="details" *ngIf="expanded">
+    <p>Details</p>
+  </div>
   <td>bc1qar0srrr7xfkvy5l643lydnw9re59gtzzwf5mdq</td>
   <td>0.2423423535465456464776</td>
   <td>100</td>
   <td>100</td>
   <td class="actions">
-    <a href="#" class="control btn start-copy">Start copy</a>
-    <button class="control btn expand-details">Expand details <span style="margin-left: 1em">↓</span></button>
+    <a href="https://google.com" class="control btn start-copy">Start copy</a>
+    <button class="control btn expand-details"
+            (click)="this.expanded = !this.expanded">{{ expanded ? "Hide" : "Expand" }} details <span
+      style="margin-left: 1em">{{ expanded ? "↑" : "↓" }}</span></button>
   </td>
   <div class="item">
     <div class="info headline">
@@ -25,8 +30,10 @@
       <p>100</p>
     </div>
     <div class="actions headline">
-      <a href="#" class="control btn start-copy">Start copy</a>
-      <button class="control btn expand-details">Expand details <span style="margin-left: 1em">↓</span></button>
+      <a href="https://google.com" class="control btn start-copy">Start copy</a>
+      <button class="control btn expand-details"
+              (click)="this.expanded = !this.expanded">{{ expanded ? "Hide" : "Expand" }} details <span
+        style="margin-left: 1em">{{ expanded ? "↑" : "↓" }}</span></button>
     </div>
   </div>
 </ng-container>
