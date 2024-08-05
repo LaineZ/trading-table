@@ -1,4 +1,5 @@
 import {ITradingStatLead} from "./ITradingStatLead";
+import {ITradingStatPerformance} from "./ITradingStatPerformance";
 
 export interface ITradingItem {
   expanded: boolean,
@@ -6,5 +7,6 @@ export interface ITradingItem {
   pnl: number,
   followers: number,
   roi: number,
-  lead: ITradingStatLead
+  lead: ITradingStatLead,
+  performance: ITradingStatPerformance
 }

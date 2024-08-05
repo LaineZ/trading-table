@@ -26,6 +26,7 @@
   border: none;
   background-color: var(--accent);
   font-size: 1.1em;
+  font-weight: bold;
   padding: 0.5em 2em;
   vertical-align: middle;
   text-align: center;
@@ -63,9 +64,10 @@
 }
 
 .details {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 1em;
-  max-height: 30em;
+  max-height: 26em;
   grid-column: span 2;
 }
 
@@ -107,7 +109,7 @@ p {
   }
 
   .expand-details {
-    font-size: 0.7em;
+    font-size: 0.8em;
     padding: 0;
   }
 
@@ -116,6 +118,13 @@ p {
     grid-template-columns: repeat(3, 1fr);
     gap: 1em;
     justify-content: center;
+  }
+
+  .details {
+    display: flex;
+    gap: 2.7em;
+    flex-direction: column;
+    max-height: unset !important;
   }
 }
 

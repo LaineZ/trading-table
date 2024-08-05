@@ -3,16 +3,17 @@ import {CommonModule} from '@angular/common';
 import {ITradingItem} from "../../utils/ITradingItem";
 import {LeadStatsComponent} from "../lead-stats/lead-stats.component";
 import {animate, state, style, transition, trigger} from "@angular/animations";
+import {PerformanceStatsComponent} from "../performance-stats/performance-stats.component";
 
 @Component({
   selector: 'app-trading-table',
   standalone: true,
-  imports: [CommonModule, LeadStatsComponent],
+  imports: [CommonModule, LeadStatsComponent, PerformanceStatsComponent],
   templateUrl: './trading-table.component.html',
   animations: [
     trigger('fadeInOut', [
       state('void', style({ opacity: 0, maxHeight: '0', overflow: 'hidden' })),
-      state('*', style({ opacity: 1, maxHeight: '30em' })),
+      state('*', style({ opacity: 1 })),
       transition(':enter, :leave', [
         animate(150)
       ])
@@ -35,6 +36,14 @@ export class TradingTableComponent {
         leading_margin_balance: "1000",
         profit_sharing: 10.01,
         aum: "1,832,748.98"
+      },
+      performance: {
+        mdd: 19.69,
+        shape_ratio: 1.38,
+        win_rate: 50,
+        total_positions: 6,
+        win_positions: 3,
+        pnl: 24686.58
       }
     },
     {
@@ -50,6 +59,14 @@ export class TradingTableComponent {
         leading_margin_balance: "1000",
         profit_sharing: 10.01,
         aum: "1,832,748.98"
+      },
+      performance: {
+        mdd: 19.69,
+        shape_ratio: 1.38,
+        win_rate: 50,
+        total_positions: 6,
+        win_positions: 3,
+        pnl: 24686.58
       }
     }
   ];

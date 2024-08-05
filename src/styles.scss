@@ -7,6 +7,7 @@
   --fg1: #252525;
   --accent: #ff005c;
   --green: #7dff17;
+  --outline: #414141;
 }
 
 @font-face {
@@ -245,12 +246,14 @@
 
 .stat {
   background-color: var(--bg1);
-  border-image: linear-gradient(100deg, var(--fg1), var(--bg)) 1;
+  border-image: linear-gradient(100deg, var(--outline), var(--bg)) 1;
   border-width: 0.1em;
   border-style: solid;
   padding: 1em;
   text-align: left;
   font-weight: normal;
+  height: 100%;
+  max-height: 24em;
 }
 
 .profit p {
@@ -274,6 +277,10 @@
 .stat h2 {
   font-weight: normal;
   font-size: 1.2em;
+}
+
+.stat-table {
+  width: 100%;
 }
 
 .stat-table th, td {

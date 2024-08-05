@@ -123,8 +123,14 @@ input::-webkit-input-placeholder {
   -webkit-appearance: none;
   -moz-appearance: none;
   border: none;
-  background: var(--bg1);
+  background: transparent;
   color: var(--fg);
+}
+
+.select-wrapper select option {
+  background-color: var(--bg);
+  color: var(--fg);
+  border: none;
 }
 
 .tab-selector .control:last-child {

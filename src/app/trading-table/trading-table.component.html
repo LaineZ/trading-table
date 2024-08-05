@@ -1,5 +1,5 @@
 <div class="trades-container">
-  <table class="trades" #tableBody>
+  <table class="trades">
     <tr>
       <th>Wallet address</th>
       <th>PNL</th>
@@ -25,6 +25,7 @@
         <td style="padding: 0" colspan="5">
           <div class="details" [@fadeInOut] *ngIf="item.expanded">
             <app-lead-stats [lead]="item.lead" [id]="'detail_' + i"></app-lead-stats>
+            <app-performance-stats [stat]="item"></app-performance-stats>
           </div>
         </td>
       </tr>
@@ -57,8 +58,9 @@
               style="margin-left: 1em">{{ item.expanded ? "↑" : "↓" }}</span></button>
           </div>
 
-          <div class="details" [@fadeInOut]  *ngIf="item.expanded">
+          <div class="details" [@fadeInOut] *ngIf="item.expanded">
             <app-lead-stats [lead]="item.lead" [id]="'detail_' + i"></app-lead-stats>
+            <app-performance-stats [stat]="item"></app-performance-stats>
           </div>
         </div>
       </ng-container>
