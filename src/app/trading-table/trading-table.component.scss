@@ -1,7 +1,7 @@
 .trades {
   width: 100%;
   font-size: 1.1em;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .trades td {
@@ -71,7 +71,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1em;
-  max-height: 26em;
+  max-height: 35em;
   grid-column: span 2;
 }
 

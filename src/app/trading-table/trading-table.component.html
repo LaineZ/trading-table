@@ -22,7 +22,7 @@
       </tr>
       <tr>
         <td style="padding: 0" colspan="5">
-          <div class="details" [@fadeInOut] *ngIf="item.expanded">
+          <div class="details" style="margin-bottom: 2em;" [@fadeInOut] *ngIf="item.expanded">
             <app-lead-stats [lead]="item.lead" [id]="'detail_' + i"></app-lead-stats>
             <app-performance-stats [stat]="item"></app-performance-stats>
             <app-plot-stats></app-plot-stats>

@@ -110,13 +110,27 @@ input::-webkit-input-placeholder {
 
 .select-wrapper {
   display: flex;
+  place-items: center;
+  width: 9em;
+  position: relative;
+}
+
+.check-wrapper {
+  display: flex;
   gap: 0.5em;
   place-items: center;
   width: fit-content;
 }
 
-.select-wrapper arrow {
+.select-wrapper:hover {
+  background-color: var(--accent);
+}
+
+.select-wrapper .arrow {
   user-select: none;
+  pointer-events: none;
+  position: absolute;
+  left: 1em;
 }
 
 .select-wrapper select {
@@ -126,6 +140,8 @@ input::-webkit-input-placeholder {
   border: none;
   background: transparent;
   color: var(--fg);
+  width: 100%;
+  text-align: center;
 }
 
 .select-wrapper select option {
@@ -134,18 +150,19 @@ input::-webkit-input-placeholder {
   border: none;
 }
 
-.tab-selector .control:last-child {
-  grid-column: span 2;
-}
-
 @media (max-width: 1240px) {
   .tab-filter, .tab-selector {
     gap: 0.5em;
   }
 
-  .tab-selector {
+/*  .tab-selector {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+  }*/
+
+
+  .stretched-control {
+    flex: 1;
   }
 
   .tab-filter input[type="text"] {
@@ -153,7 +170,8 @@ input::-webkit-input-placeholder {
   }
 
   .tab-selector .control {
-    flex: 1;
+    white-space: nowrap;
+    width: fit-content;
   }
 
   input[type="text"].control, input[type="search"].control {
@@ -167,7 +185,11 @@ input::-webkit-input-placeholder {
 }
 
 @media (max-width: 395px) {
-  .select-wrapper {
+  .select-wrapper, .check-wrapper {
     width: 100%;
+  }
+
+  .filter-control {
+    flex: 1;
   }
 }

@@ -9,6 +9,15 @@
   border-image: none;
   border: none;
   padding: 0;
+  position: relative;
+}
+
+
+.arrow {
+  user-select: none;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
 }
 
 .select-wrapper select {
@@ -19,7 +28,7 @@
   background: transparent;
   color: var(--fg);
   font-size: 0.9em;
-  padding-right: 1em;
+  padding-right: 1.3em;
 }
 
 .select-wrapper select option {
