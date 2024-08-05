@@ -53,11 +53,11 @@
           <div class="actions headline">
             <a href="https://google.com" class="control btn start-copy">Start copy</a>
             <button class="control btn expand-details"
-                    (click)="item.expanded = !item.expanded">{{ item.expanded ? "Hide" : "Expand" }} details <span
+                    (click)="toga(i)">{{ item.expanded ? "Hide" : "Expand" }} details <span
               style="margin-left: 1em">{{ item.expanded ? "↑" : "↓" }}</span></button>
           </div>
 
-          <div class="details" *ngIf="item.expanded">
+          <div class="details" [@fadeInOut]  *ngIf="item.expanded">
             <app-lead-stats [lead]="item.lead" [id]="'detail_' + i"></app-lead-stats>
           </div>
         </div>

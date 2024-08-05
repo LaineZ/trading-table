@@ -1,0 +1,26 @@
+<div class="stat">
+  <h2>Lead Trader Overview</h2>
+
+  <div class="profit">
+    <p>Copier PnL</p>
+    <h4 [classList]="[isNegative()]">{{ lead.copier_pnl }} USDT</h4>
+  </div>
+  <table class="stat-table">
+    <tr>
+      <th>AUM</th>
+      <td>{{ lead.aum }} USDT</td>
+    </tr>
+    <tr>
+      <th>Profit Sharing</th>
+      <td>{{ lead.profit_sharing }}%</td>
+    </tr>
+    <tr>
+      <th>Leading Margin Balance</th>
+      <td>{{ lead.leading_margin_balance }} USDT</td>
+    </tr>
+    <tr>
+      <th>Minimum Copy Amount</th>
+      <td>{{ lead.copy_amount_min }}/{{ lead.copy_amount_max }} USDT</td>
+    </tr>
+  </table>
+</div>
