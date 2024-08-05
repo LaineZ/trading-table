@@ -17,8 +17,7 @@
         <td class="actions">
           <a href="https://google.com" class="control btn start-copy">Start copy</a>
           <button class="control btn expand-details"
-                  (click)="toga(i)">{{ item.expanded ? "Hide" : "Expand" }} details <span
-            style="margin-left: 1em">{{ item.expanded ? "↑" : "↓" }}</span></button>
+                  (click)="toga(i)">{{ item.expanded ? "Hide" : "Expand" }} details <span class="arrow">{{ item.expanded ? "↑" : "↓" }}</span></button>
         </td>
       </tr>
       <tr>
@@ -26,6 +25,7 @@
           <div class="details" [@fadeInOut] *ngIf="item.expanded">
             <app-lead-stats [lead]="item.lead" [id]="'detail_' + i"></app-lead-stats>
             <app-performance-stats [stat]="item"></app-performance-stats>
+            <app-plot-stats></app-plot-stats>
           </div>
         </td>
       </tr>
@@ -34,7 +34,7 @@
   <div class="container">
     <div class="trades-mobile">
       <ng-container *ngFor="let item of items; index as i">
-        <div class="item">
+        <div class="item" [ngStyle]="{ 'max-height': item.expanded ? '100em' : '13em' }">
           <div class="info headline">
             <h4>Wallet address</h4>
             <p class="wallet-address">bc1qar0srrr7xfkvy5l643lydnw9re59gtzzwf5mdq</p>
@@ -61,6 +61,7 @@
           <div class="details" [@fadeInOut] *ngIf="item.expanded">
             <app-lead-stats [lead]="item.lead" [id]="'detail_' + i"></app-lead-stats>
             <app-performance-stats [stat]="item"></app-performance-stats>
+            <app-plot-stats></app-plot-stats>
           </div>
         </div>
       </ng-container>

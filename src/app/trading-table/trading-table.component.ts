@@ -4,11 +4,12 @@ import {ITradingItem} from "../../utils/ITradingItem";
 import {LeadStatsComponent} from "../lead-stats/lead-stats.component";
 import {animate, state, style, transition, trigger} from "@angular/animations";
 import {PerformanceStatsComponent} from "../performance-stats/performance-stats.component";
+import {PlotStatsComponent} from "../plot-stats/plot-stats.component";
 
 @Component({
   selector: 'app-trading-table',
   standalone: true,
-  imports: [CommonModule, LeadStatsComponent, PerformanceStatsComponent],
+  imports: [CommonModule, LeadStatsComponent, PerformanceStatsComponent, PlotStatsComponent],
   templateUrl: './trading-table.component.html',
   animations: [
     trigger('fadeInOut', [
