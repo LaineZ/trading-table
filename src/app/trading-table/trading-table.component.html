@@ -1,5 +1,5 @@
 <div class="trades-container">
-  <table class="trades">
+  <table class="trades" #tableBody>
     <tr>
       <th>Wallet address</th>
       <th>PNL</th>
@@ -7,11 +7,61 @@
       <th>Followers</th>
       <th></th>
     </tr>
-    <tr *ngFor="let number of [0,1,2,3,4]" app-trading-item></tr>
+
+    <ng-container *ngFor="let item of items; index as i">
+      <tr>
+        <td>bc1qar0srrr7xfkvy5l643lydnw9re59gtzzwf5mdq</td>
+        <td>0.2423423535465456464776</td>
+        <td>100</td>
+        <td>100</td>
+        <td class="actions">
+          <a href="https://google.com" class="control btn start-copy">Start copy</a>
+          <button class="control btn expand-details"
+                  (click)="toga(i)">{{ item.expanded ? "Hide" : "Expand" }} details <span
+            style="margin-left: 1em">{{ item.expanded ? "↑" : "↓" }}</span></button>
+        </td>
+      </tr>
+      <tr>
+        <td style="padding: 0" colspan="5">
+          <div class="details" [@fadeInOut] *ngIf="item.expanded">
+            <app-lead-stats [lead]="item.lead" [id]="'detail_' + i"></app-lead-stats>
+          </div>
+        </td>
+      </tr>
+    </ng-container>
   </table>
   <div class="container">
     <div class="trades-mobile">
-      <div *ngFor="let number of [0,1,2,3,4]" app-trading-item></div>
+      <ng-container *ngFor="let item of items; index as i">
+        <div class="item">
+          <div class="info headline">
+            <h4>Wallet address</h4>
+            <p class="wallet-address">bc1qar0srrr7xfkvy5l643lydnw9re59gtzzwf5mdq</p>
+          </div>
+          <div class="info">
+            <h4>PNL</h4>
+            <p class="wallet-address">0.2423423535465456464776</p>
+          </div>
+          <div class="info">
+            <h4>ROI</h4>
+            <p>100</p>
+          </div>
+          <div class="info">
+            <h4>Followers</h4>
+            <p>100</p>
+          </div>
+          <div class="actions headline">
+            <a href="https://google.com" class="control btn start-copy">Start copy</a>
+            <button class="control btn expand-details"
+                    (click)="item.expanded = !item.expanded">{{ item.expanded ? "Hide" : "Expand" }} details <span
+              style="margin-left: 1em">{{ item.expanded ? "↑" : "↓" }}</span></button>
+          </div>
+
+          <div class="details" *ngIf="item.expanded">
+            <app-lead-stats [lead]="item.lead" [id]="'detail_' + i"></app-lead-stats>
+          </div>
+        </div>
+      </ng-container>
     </div>
   </div>
 </div>

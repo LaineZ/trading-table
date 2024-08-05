@@ -6,6 +6,7 @@
   --bg1: #171717;
   --fg1: #252525;
   --accent: #ff005c;
+  --green: #7dff17;
 }
 
 @font-face {
@@ -230,7 +231,10 @@
 
 .control {
   background-color: var(--bg1);
-  border: 0.1em solid var(--fg1);
+  /* border: 0.1em solid var(--fg1); */
+  border-image: linear-gradient(100deg, var(--fg1), var(--bg)) 1;
+  border-width: 0.1em;
+  border-style: solid;
   padding: 1em 2em 1em 2em;
   color: var(--fg);
   height: 100%;
@@ -239,12 +243,59 @@
   outline: none !important;
 }
 
+.stat {
+  background-color: var(--bg1);
+  border-image: linear-gradient(100deg, var(--fg1), var(--bg)) 1;
+  border-width: 0.1em;
+  border-style: solid;
+  padding: 1em;
+  text-align: left;
+  font-weight: normal;
+}
+
+.profit p {
+  color: var(--fg2);
+  margin-bottom: 0.7rem;
+}
+
+.profit h4 {
+  margin-bottom: 1em;
+  margin-top: 0;
+}
+
+.profit h4.positive {
+  color: var(--green);
+}
+
+.profit h4.negative {
+  color: var(--accent);
+}
+
+.stat h2 {
+  font-weight: normal;
+  font-size: 1.2em;
+}
+
+.stat-table th, td {
+  padding: 1rem 1.5rem 1rem 0;
+}
+
+.stat-table td {
+  text-align: right;
+  padding-right: 0;
+}
+
+.stat-table th {
+  color: var(--fg2);
+}
+
 input.control:hover, input.control:focus {
-  border-color: var(--accent);
+  border-image: linear-gradient(100deg, var(--accent), var(--accent)) 1;
   transition: all 300ms;
 }
 
 .control.btn:hover {
+  border-image: none;
   background-color: var(--accent);
   transition: all 300ms;
 }
