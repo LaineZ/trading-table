@@ -1,0 +1,49 @@
+<div class="stat">
+  <div class="header">
+    <h2>Performance</h2>
+    <div class="select-wrapper control">
+      <select>
+        <option>7 days</option>
+        <option>30 days</option>
+      </select>
+      <span class="arrow">↓</span>
+    </div>
+  </div>
+
+  <table class="stat-table">
+    <tr>
+      <td style="text-align: left; color: unset; padding: 0;">
+        <div class="profit">
+          <p>ROI</p>
+          <h4 [classList]="[isNegativeROI()]">{{ stat.roi }}%</h4>
+        </div>
+      </td>
+      <td style="color: unset; padding: 0;">
+        <div class="profit">
+          <p>PnL</p>
+          <h4 [classList]="[isNegativePnl()]"><span>{{ isNegativePnl() ? "+" : "-" }}</span>{{ stat.performance.pnl }}</h4>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th>Shape Ratio</th>
+      <td>{{ stat.performance.shape_ratio }}</td>
+    </tr>
+    <tr>
+      <th>MDD</th>
+      <td>{{ stat.performance.mdd }}%</td>
+    </tr>
+    <tr>
+      <th>Win Rate</th>
+      <td>{{ stat.performance.win_rate }}%</td>
+    </tr>
+    <tr>
+      <th>Win Position</th>
+      <td>{{ stat.performance.win_positions }}</td>
+    </tr>
+    <tr>
+      <th>Total Positions</th>
+      <td>{{ stat.performance.total_positions }}</td>
+    </tr>
+  </table>
+</div>

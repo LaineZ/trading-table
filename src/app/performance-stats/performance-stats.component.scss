@@ -1,0 +1,29 @@
+.header {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.select-wrapper {
+  border-image: none;
+  border: none;
+  padding: 0;
+}
+
+.select-wrapper select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  background: transparent;
+  color: var(--fg);
+  font-size: 0.9em;
+  padding-right: 1em;
+}
+
+.select-wrapper select option {
+  background-color: var(--bg);
+  color: var(--fg);
+  border: none;
+}
